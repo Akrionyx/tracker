@@ -1,5 +1,5 @@
 /* Offline cache for the expense tracker. Bump CACHE when you upload a new build. */
-const CACHE = "tracker-v5";
+const CACHE = "tracker-v6";
 const CORE = ["./", "./index.html", "./manifest.json"];
 const ICONS = ["./apple-touch-icon.png", "./icon-192.png", "./icon-512.png"];
 const NAV_TIMEOUT = 3000;
