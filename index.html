@@ -2,7 +2,7 @@
 <html lang="en-IN">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Expense &amp; card tracker</title>
 
 <meta name="description" content="Private expense and credit card tracker. All data stays on this device.">
@@ -127,6 +127,12 @@ if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
     navigator.serviceWorker.register("./sw.js").catch(function () { /* offline mode unavailable */ });
   });
+}
+/* This ledger only exists on this device, so ask the browser not to evict it. */
+if (navigator.storage && navigator.storage.persist) {
+  navigator.storage.persisted().then(function (already) {
+    if (!already) navigator.storage.persist();
+  }).catch(function () { /* not supported here */ });
 }
 </script>
 </body>
