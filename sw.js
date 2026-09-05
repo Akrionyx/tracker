@@ -1,5 +1,5 @@
 /* Offline cache for the expense tracker. Bump CACHE when you upload a new build. */
-const CACHE = "tracker-v3";
+const CACHE = "tracker-v4";
 const ASSETS = ["./", "./index.html", "./manifest.json", "./apple-touch-icon.png", "./icon-192.png", "./icon-512.png"];
 
 self.addEventListener("install", (e) => {
