@@ -1,5 +1,5 @@
 /* Offline cache for the expense tracker. Bump CACHE when you upload a new build. */
-const CACHE = "finix-v11";
+const CACHE = "finix-v13";
 const CORE = ["./", "./index.html", "./manifest.json"];
 const ICONS = ["./apple-touch-icon.png", "./icon-192.png", "./icon-512.png", "./logo.png"];
 const NAV_TIMEOUT = 3000;
